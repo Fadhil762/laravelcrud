@@ -8,7 +8,7 @@
                 <h2>Product Management</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{route('products.index')}}">Add Product</a>
+                <a class="btn btn-success" href="{{route('products.create')}}">Add Product</a>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
             <td>{{$product->name}}</td>
             <td>{{$product->detail}}</td>
             <td>
-                <form action="{{route('products.destroy',$product->id)}}" method="post">
+                <form action="{{route('products.destroy',$product->id)}}" method="post" class="form-control">
                     <a class="btn btn-info" href="{{route('products.show',$product->id)}}">Show</a>
                     <a class="btn btn-primary" href="{{route('products.edit',$product->id)}}">Edit</a>
                     @csrf
